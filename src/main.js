@@ -4,17 +4,23 @@ import App from './App.vue'
 import VueRouter from "vue-router"
 // 导入全局样式
 import './assets/css/style.css'
-
-
 Vue.use(VueRouter)
+//导入饿了么UI
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
+
 
 Vue.config.productionTip = false
 
 // 写组件
  import index from "./components/index.vue"
+//  import detail from "./components/detail.vue"
 //写规则
 const  routes=[
-    { path:"/index", component:index}
+    { path:"/index", component:index},
+    // { path:"/detail", component:detail},
 
 ]
 
