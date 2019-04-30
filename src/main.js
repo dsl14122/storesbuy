@@ -16,11 +16,11 @@ Vue.config.productionTip = false
 
 // 写组件
  import index from "./components/index.vue"
-//  import detail from "./components/detail.vue"
+ import detail from "./components/detail.vue"
 //写规则
 const  routes=[
     { path:"/index", component:index},
-    // { path:"/detail", component:detail},
+    { path:"/detail", component:detail},
 
 ]
 
