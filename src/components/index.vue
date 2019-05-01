@@ -149,7 +149,7 @@
         <div class="wrap-box">
           <ul class="img-list">
             <li v-for="(it, i) in item.datas" :key="i">
-              <router-link to="/detail">
+              <router-link :to="'/detail/'+it.artID">
                 <div class="img-box">
                   <img :src="it.img_url">
                 </div>
@@ -199,7 +199,7 @@ export default {
         this.catelist = res.data.message.catelist;
         this.sliderlist = res.data.message.sliderlist;
         this.toplist = res.data.message.toplist;
-      }),
+      }),  
       axios
         .get("http://111.230.232.110:8899/site/goods/getgoodsgroup")
         .then(res => {

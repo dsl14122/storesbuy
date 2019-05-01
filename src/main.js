@@ -20,7 +20,7 @@ Vue.config.productionTip = false
 //写规则
 const  routes=[
     { path:"/index", component:index},
-    { path:"/detail", component:detail},
+    { path:"/detail/:id", component:detail},
 
 ]
 
