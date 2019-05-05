@@ -14,8 +14,11 @@ Vue.use(ElementUI);
 
 
 Vue.config.productionTip = false
-
-
+//原型中设置axios
+import axios from "axios";
+ Vue.prototype.$axios=axios
+//设置axios 基地址
+axios.defaults.baseURL='http://111.230.232.110:8899'
 
 new Vue({
   render: h => h(App),

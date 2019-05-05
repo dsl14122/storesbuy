@@ -225,9 +225,9 @@ export default {
   },
   created() {
     this.getComment();
-    axios
+    this.$axios
       .get(
-        `http://111.230.232.110:8899/site/goods/getgoodsinfo/${
+        `/site/goods/getgoodsinfo/${
           this.$route.params.id
         }`
       )
@@ -253,9 +253,9 @@ export default {
       if (this.comment == "") {
         this.$message.error("输入内容为空！");
       } else {
-        axios
+     this.$axios
           .post(
-            `http://111.230.232.110:8899/site/validate/comment/post/goods/${
+            `/site/validate/comment/post/goods/${
               this.$route.params.id
             }`,
             {
@@ -275,9 +275,9 @@ export default {
     },
     //获取评论数据
     getComment() {
-      axios
+   this.$axios
         .get(
-          `http://111.230.232.110:8899/site/comment/getbypage/goods/${
+          `/site/comment/getbypage/goods/${
             this.$route.params.id
           }?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`
         )

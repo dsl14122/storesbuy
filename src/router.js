@@ -12,7 +12,7 @@ import userOrder from "./components/userOrder.vue"
 import userDetail from "./components/userDetail.vue"
 //写规则
 const  routes=[
-   { path:"/", component:index},
+   { path:"/", redirect:"/index"},
    { path:"/index", component:index},
    { path:"/detail/:id", component:detail},
    { path:"/user", component:userContainer,children:[
